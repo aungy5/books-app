@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Star Books</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Zurb stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <!-- Google font stylesheet -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-transition="overlap">
+        <!-- Close button -->
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- Menu -->
+        <div id="favorites">
+            <h2>Favorites</h2>
+            <ul class="vertical menu favorite-menu">
+            </ul>
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+        <!-- Your page content lives here -->
+        <header class="header grid-container full">
+            <div class="grid-x">
+                <h1 class="cell small-7">Star Books</h1>
+                <nav class="cell small-5 grid-x">
+                    <!-- <li class="cell medium-4 grid-x align-middle"><a href="favorites.html">Favorites</a></li> -->
+                    <li class="cell medium-6 grid-x align-middle nav-links"><a href="#bestseller">Best Sellers</a>
+                    </li>
+                    <li class="cell medium-6 grid-x align-middle nav-links"><a data-toggle="offCanvas">Favorites</a>
+                    </li>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="search_books" class="search_books">
+                <div id="search-bar-items">
+                    <p>Search for a topic below and see what books are available!</p>
+                    <div>
+                        <input id="search-bar" type="text">
+                    </div>
+                    <div id="wrapper">
+                        <button id="search-btn" type="button" class="search-btn">Search</button>
+                        <button id="clear" value="reset" class="clear">Clear Search Results</button>
+                    </div>
+                </div>
+                <div id="previous-searches">
+                    <h4>My Previous Searches</h4>
+                    <ol id="previous-searches-list-results">
+                    </ol>
+                    <button id="clearPrev" value="reset" class="clear">Clear Previous Searches</button>
+                </div>
+            </section>
+
+            <section id="results-section" class="results-section">
+                <!-- <h2>Results</h2> -->
+                <ul id="list-results" class="grid-x"></ul>
+            </section>
+            <section id="bestseller" class="bestseller">
+                <h2>Best Sellers</h2>
+                <label for="BSlists">Choose a List:</label>
+                <select id="list-type" name="list-type">
+                    <option value="hardcover-fiction">Fiction</option>
+                    <option value="hardcover-nonfiction">Non-Fiction</option>
+                    <option value="trade-fiction-paperback">Paperback Trade Fiction</option>
+                    <option value="paperback-nonfiction">Paperback Nonfiction</option>
+                    <option value="combined-print-and-e-book-fiction">E-book Fiction</option>
+                    <option value="combined-print-and-e-book-nonfiction">Combined Print & E-book Nonfiction
+                    </option>
+                </select>
+
+                <input id="submit" type="submit">
+
+                <ol id="best-seller-list-results" class="grid-x">
+                </ol>
+            </section>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </main>
+    <!-- jQuery file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Zurb JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>
